@@ -13,8 +13,8 @@ export default {
     light2: "hsl(0, 0%, 99%)",
   },
   breakpoints: {
-    mobile: "only screen and (max-width: 50rem",
-    tablet: "only screen and (max-width: 65rem",
+    mobile: "only screen and (max-width: 50rem)",
+    tablet: "only screen and (max-width: 65rem)",
   },
   spacings: {
     xxSmall: "0.25rem",
@@ -30,6 +30,6 @@ export default {
     link: "color 0.2s ease",
   },
   shadows: {
-    shadow1: "0px 5px 20px rgba(30, 30, 31, 0.05",
+    shadow1: "0px 5px 20px rgba(30, 30, 31, 0.05)",
   },
 }
