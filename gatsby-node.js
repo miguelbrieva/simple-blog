@@ -2,6 +2,7 @@
 //   const { data } = await graphql`
 //     query {
 //       allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+<<<<<<< HEAD
 //         edges {
 //           node {
 //             frontmatter {
@@ -9,13 +10,26 @@
 //             }
 //             id
 //           }
+=======
+//         nodes {
+//           frontmatter {
+//             slug
+//           }
+//           id
+>>>>>>> b5904a9edc71ac2c860dafcde0d99541476fb951
 //         }
 //       }
 //     }
 //   `
 
 //   // Create paginated pages for posts
+<<<<<<< HEAD
 //   const postPerPage = 3
+=======
+
+//   const postPerPage = 3
+
+>>>>>>> b5904a9edc71ac2c860dafcde0d99541476fb951
 //   const numPages = Math.ceil(data.allMdx.edges.length / postPerPage)
 
 //   Array.from({ length: numPages }).forEach((_, index) => {
