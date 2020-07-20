@@ -1,13 +1,15 @@
 import React from "react"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
+import { MDXProvider } from "@mdx-js/react"
 import Theme from "./src/themes/theme"
+import { Table } from "./src/components"
 
 const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: red;
+    color: #313131;
   }
   body, html {
     font-family: ${props => props.theme.fonts.main};
@@ -16,9 +18,15 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 
+const components = {
+  table: Table,
+}
+
 export const wrapRootElement = ({ element }) => (
-  <ThemeProvider theme={Theme}>
-    <GlobalStyles />
-    {element}
-  </ThemeProvider>
+  <MDXProvider components={components}>
+    <ThemeProvider theme={Theme}>
+      <GlobalStyles />
+      {element}
+    </ThemeProvider>
+  </MDXProvider>
 )
